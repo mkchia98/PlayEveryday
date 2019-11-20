@@ -1,0 +1,13 @@
+---
+- name: Creating a file
+  hosts: all
+  tasks: 
+  - name: Check the information on the file if the file exists
+    win_stat: 
+      path: C:\Temp\test.conf
+    register: out
+  - name: Showing the statistics
+    debug:
+      var: out
+
+...
