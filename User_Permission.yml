@@ -6,7 +6,8 @@
     win_owner:
       path: C:\Temp\test.conf
       user: user_mkchia
-      
+      recurse: true
+
   - name: Grant FullControl AccessRule for user to a file
     win_acl:
       path: C:\Temp\test.conf

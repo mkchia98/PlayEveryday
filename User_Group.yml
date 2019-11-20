@@ -1,0 +1,23 @@
+---
+- name: Create Group, User, Add User Group, Create User Profile
+  hosts: all
+  tasks: 
+    - name: Create Group
+      win_group:
+        name: Special Group
+        description: This group is special
+        state: present
+  
+    - name: Create User and Add to Group
+      win_user:
+        name: SpecialUser
+        state: present
+        groups:
+          - Special Group
+
+    - name: Create a profile for an account
+      win_user_profile:
+        username: SpecialUser
+        state: present
+
+...
