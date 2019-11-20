@@ -1,0 +1,24 @@
+---
+- name: Testing firewall
+  hosts: all
+  tasks: 
+  - name: Denying port 80
+    win_firewall_rule:
+      name: Testing
+      state: present
+      enabled: true
+      localport: 80
+      action: block
+      direction: In
+      protocol: TCP
+
+  - name: verify the access
+    uri:
+      url: http://http://ec2-54-169-75-100.ap-southeast-1.compute.amazonaws.com
+      return_content: yes
+      status_code: 200
+      delegate_to: localhost
+      register: out
+    - name: Printing the output
+      debug:
+        var: out
