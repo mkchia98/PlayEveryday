@@ -14,7 +14,7 @@
 
   - name: verify the access
     uri:
-      url: http://http://ec2-54-169-75-100.ap-southeast-1.compute.amazonaws.com
+      url: http://ec2-54-169-75-100.ap-southeast-1.compute.amazonaws.com
       return_content: yes
       status_code: 200
     delegate_to: localhost
