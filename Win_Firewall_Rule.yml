@@ -17,8 +17,8 @@
       url: http://http://ec2-54-169-75-100.ap-southeast-1.compute.amazonaws.com
       return_content: yes
       status_code: 200
-      delegate_to: localhost
-      register: out
+    delegate_to: localhost
+    register: out
       
   - name: Printing the output
     debug:
