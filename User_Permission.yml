@@ -1,0 +1,11 @@
+---
+- name: Grant FullControl AccessRule for user to a file
+  win_acl:
+    path: C:\Temp\test.conf
+    user: user_mkchia
+    rights: FullControl
+    type: allow
+    state: present
+    inherit: ContainerInherit, ObjectInherit
+    propagation: 'None'
+...
