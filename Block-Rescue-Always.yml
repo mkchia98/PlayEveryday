@@ -1,0 +1,21 @@
+- name: Testing Handlers
+  hosts: all
+  force_handlers: true
+  tasks:
+  - block:
+    - name: Install Flash Player
+      win_chocolatey:
+        name: flashplayerpp
+        state: present
+    rescue: 
+    - name: Install Flash Player
+      win_chocolatey:
+        name: flashplayerppapi
+        state: absent
+    always:
+    - name: I am Hungry
+      debug:
+        msg: I need to eat alotttttt
+  - name: This is a task
+    debug:
+      msg: bye bye
