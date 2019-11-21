@@ -1,3 +1,4 @@
+---
 - name: simple boolean task demo
   hosts: all
   vars:
@@ -14,3 +15,4 @@
     - name: Reboot if installing web-server feature requires it
       win_reboot:
       when: feature_output.reboot.required
+...
