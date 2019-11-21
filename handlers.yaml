@@ -22,8 +22,13 @@
       - reboot server
     
     - name: failing the task
-      fail:
+      debug:
         msg: failing the task as testing purpose
+      failed_when: true
+
+    - name: this is another task
+      debug:
+        final task
       
   handlers:
   - name: reboot server
