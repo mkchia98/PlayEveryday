@@ -5,7 +5,7 @@
   tasks:
     name: Install "{{ my_service }}" with sub features and management tools
     win_feature:
-      name: "{{ m_service }}"
+      name: "{{ my_service }}"
       state: present
       include_sub_features: yes
       include_management_tool: yes

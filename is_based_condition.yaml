@@ -1,4 +1,4 @@
-- name: Checking if the variable is defined\
+- name: Checking if the variable is defined
   hosts: all
   vars:
     my_service: Web-Server
