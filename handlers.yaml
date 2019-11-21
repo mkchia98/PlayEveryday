@@ -23,7 +23,7 @@
     
     - name: failing the task
       fail:
-      msg: failing the task as testing purpose
+        msg: failing the task as testing purpose
       
   handlers:
   - name: reboot server
