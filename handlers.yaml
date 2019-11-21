@@ -25,6 +25,7 @@
       debug:
         msg: failing the task as testing purpose
       failed_when: true
+      ignore_errors: true
 
     - name: this is another task
       debug:
