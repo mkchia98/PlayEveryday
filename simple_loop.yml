@@ -8,6 +8,6 @@
         state: present
       loop:
       - jre8
-      - javaruntime.preventasktoolbar
+      - javaruntime-preventasktoolbar
       - dropbox
 ...
