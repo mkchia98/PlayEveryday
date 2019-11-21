@@ -14,5 +14,5 @@
       register: feature_output
     - name: Reboot if installing web-server feature requires it
       win_reboot:
-      when: feature_output.reboot.required
+      when: feature_output.reboot_required
 ...
