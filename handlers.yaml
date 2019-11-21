@@ -14,9 +14,9 @@
 - name: Testing Handlers
   hosts: all
   tasks: 
-    - name: Install .Net 4.6.1
+    - name: Install 7zip
       win_chocolatey:
-        name: vlc
+        name: 7zip
         state: present
       notify:
       - reboot server
@@ -25,7 +25,7 @@
       debug:
         msg: failing the task as testing purpose
       failed_when: true
-      ignore_errors: true
+      #ignore_errors: true
 
     - name: this is another task
       debug:
